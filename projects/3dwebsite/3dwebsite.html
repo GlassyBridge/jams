@@ -8,11 +8,22 @@
     <body>
         <a-assets>
             <!--Assets-->
+            <img id="text" src="Text.jpeg">
             <img id="floor" src="Stone_floor_basecolor.png">
             <img id="floor_NM" src="Stone_floor_normalmap.png">
+            <a-asset-item id="GLTF" src="Car.gltf"></a-asset-item>
+            <a-asset-item id="Car" src="Car.obj"></a-asset-item>
+            <a-asset-item id="Car_color" src="Car.mtl"></a-asset-item>
+
         </a-assets>
 
         <a-scene>
+            <!--Sky-->
+            <a-sky color="lightblue"></a-sky>
+
+            <!--Cube (i can't find this object)-->
+            <a-cube position="0 0 0"></a-cube>
+
             <!--Ground-->
             <a-plane
                 material = "color: #FFFFFF;
@@ -23,6 +34,32 @@
                 rotation = "-90 0 0"
                 scale = "10 10 1"
             ></a-plane>
+            
+            <!--GLTF car-->
+            <a-entity 
+                gltf-model=#GLTF
+                position="0 0 2"
+                rotation="-90 0 0"
+                scale = "0.05 0.05 0.05"
+            ></a-entity>
+            
+            <!--OBJ Car -->
+            <a-entity 
+                obj-model="obj: #Car; mtl: #Car_color"
+                position = "0 0 -2"
+                rotation="-90 0 0"
+                scale = "0.05 0.05 0.05"
+            ></a-entity>
+            
+            <!--text holder-->
+            <a-plane
+                material = "color: #FFFFFF;
+                            src: #text;"
+                position = "4 0.5 0"
+                rotation = "-25 90 0"
+                scale = "5 0.5 1"
+            ></a-plane>
+
         </a-scene>
     </body>
 </html>
