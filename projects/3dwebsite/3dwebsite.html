@@ -8,16 +8,18 @@
     <body>
         <a-assets>
             <!--Assets-->
-            <img id="floor" src="~/projects/3dwebsite/Stone_floor_basecolor.png">
-            <img id="floor_NM" src="./Stone_floor_normalmap.png">
+            <img id="floor" src="Stone_floor_basecolor.png">
+            <img id="floor_NM" src="Stone_floor_normalmap.png">
         </a-assets>
 
         <a-scene>
             <!--Ground-->
             <a-plane
-                material = "color: #FFFFFF";
+                material = "color: #FFFFFF;
                             src: #floor;
-
+                            repeat: 5 5;
+                            normal-map: #floor_NM
+                            repeat: 5 5;"
                 rotation = "-90 0 0"
                 scale = "10 10 1"
             ></a-plane>
