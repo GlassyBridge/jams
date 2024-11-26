@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hello World!</title>
+        <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    </head>
+
+    <body>
+        <a-assets>
+            <!--Assets-->
+            <img id="floor" src="~/projects/3dwebsite/Stone_floor_basecolor.png">
+            <img id="floor_NM" src="./Stone_floor_normalmap.png">
+        </a-assets>
+
+        <a-scene>
+            <!--Ground-->
+            <a-plane
+                material = "color: #FFFFFF";
+                            src: #floor;
+
+                rotation = "-90 0 0"
+                scale = "10 10 1"
+            ></a-plane>
+        </a-scene>
+    </body>
+</html>
